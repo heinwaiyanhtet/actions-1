@@ -14,7 +14,9 @@ jobs:
           run : ls -ltra
 
         - name : Executing Schell Script
-          run : ./asii-script.sh
+          run : |
+            chmod +x aasii-script.sh
+            ./asii-script.sh
         
         
 
