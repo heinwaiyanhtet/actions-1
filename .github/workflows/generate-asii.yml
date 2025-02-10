@@ -15,7 +15,7 @@ jobs:
 
         - name : Executing Schell Script
           run : |
-            chmod +x aasii-script.sh
+            chmod +x asii-script.sh
             ./asii-script.sh
         
         
