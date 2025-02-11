@@ -7,16 +7,14 @@ jobs:
     build_job_1:
         runs-on : ubuntu-latest
         steps:
-        - name: Checkout Repo
-          uses: actions/checkout@v4
+        - name: Install Cowsay Program
+          uses: sudo apt-get install cowsay -y
         
-        - name : List All Projects
-          run : ls -ltra
+        - name : Execute cowsay CMD
+          run : cowsay -f dragon "Run for cover, I am a DRAGON ... RWAR" >> dragon.txt
 
-        - name : Executing Schell Script
-          run : |
-            chmod +x asii-script.sh
-            ./asii-script.sh
+        - name : sleep for 30 seconds
+          run : sleep 30
     
     build_job_2:
         needs: build_job_1 
