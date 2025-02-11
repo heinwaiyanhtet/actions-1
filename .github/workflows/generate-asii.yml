@@ -19,6 +19,7 @@ jobs:
             ./asii-script.sh
     
     build_job_2:
+        needs: build_job_1 
         runs-on : ubuntu-latest
         steps:
         - name: Sleep for 10s
@@ -29,6 +30,7 @@ jobs:
 
 
     build_job_3:
+        needs: [build_job_2, build_job_1]
         runs-on : ubuntu-latest
         steps:
         - name : Read File
