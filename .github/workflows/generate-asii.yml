@@ -30,7 +30,7 @@ jobs:
 
 
     build_job_3:
-        needs: [build_job_2, build_job_1]
+        needs: [build_job_2]
         runs-on : ubuntu-latest
         steps:
         - name : Read File
